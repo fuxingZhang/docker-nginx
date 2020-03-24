@@ -1,13 +1,12 @@
 /var/log/nginx/*.log {
+  create 0664 nginx root
   daily
-	missingok
-	rotate 52
-	compress
-	notifempty
-	create 640 nginx adm
-	sharedscripts
-  su nginx adm
-
+  dateext
+  rotate 30
+  missingok
+  notifempty
+  compress
+  sharedscripts
 	postrotate
 		if [ -f /var/run/nginx.pid ]; then
 			kill -USR1 `cat /var/run/nginx.pid`

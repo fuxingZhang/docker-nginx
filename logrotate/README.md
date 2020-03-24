@@ -16,3 +16,10 @@ docker run -d --name nginx \
   -v /nginx/static:/usr/share/nginx/static:ro \
   nginx-logrotate:alpine
 ```
+
+## test  
+
+```bash
+docker exec -it nginx-logrotate bin/sh
+logrotate -f /etc/logrotate.d/nginx
+```
