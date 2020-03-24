@@ -1,0 +1,16 @@
+/var/log/nginx/*.log {
+  create 0664 nginx root
+  daily
+  dateext
+  rotate 30
+  missingok
+  notifempty
+  // compress   // 无法压缩，需要去掉这一行
+  sharedscripts
+  su nginx root // window提示没有权限，必须加上这一行
+	postrotate
+		if [ -f /var/run/nginx.pid ]; then
+			kill -USR1 `cat /var/run/nginx.pid`
+		fi
+	endscript
+}
