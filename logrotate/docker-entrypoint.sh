@@ -1,3 +1,3 @@
 #!/bin/bash
-logrotate -v -f /etc/logrotate.d/nginx
+service cron start
 nginx -g 'daemon off;'

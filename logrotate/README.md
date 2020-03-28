@@ -1,7 +1,6 @@
 # nginx
 
-## build image
-
+## build
 ```bash
 docker build -t zhangfuxing/nginx-logrotate .
 ```
@@ -12,7 +11,6 @@ $ docker push zhangfuxing/nginx-logrotate
 ```
 
 ## run 
-
 ```bash  
 docker run -d --name nginx \
   --net host \
@@ -22,18 +20,3 @@ docker run -d --name nginx \
   -v /nginx/static:/usr/share/nginx/static:ro \
   zhangfuxing/nginx-logrotate
 ```
-
-## test  
-
-```bash
-docker exec -it nginx bash
-# We can run a specific logrotate file manually or forcefully by the following command.
-logrotate -f /etc/logrotate.d/nginx
-# Or  we can even rotate all the logs  in verbose mode with the command below:
-logrotate -f -v /etc/logrotate.conf
-cat /var/lib/logrotate.status
-```
-
-## tip
-file 'docker-entrypoint.sh' and 'nginx'
-end of line sequence should be 'LF'
