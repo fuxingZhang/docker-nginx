@@ -1,5 +1,7 @@
 # nginx
+Nginx image with logrotate based on debian:buster
 
+<!-- 
 ## build
 ```bash
 docker build -t zhangfuxing/nginx-logrotate .
@@ -8,7 +10,13 @@ docker build -t zhangfuxing/nginx-logrotate .
 ## push
 ```bash
 $ docker push zhangfuxing/nginx-logrotate
-```
+``` 
+-->
+
+## pull
+```bash
+$ docker pull zhangfuxing/nginx-logrotate
+``` 
 
 ## run 
 ```bash  
