@@ -1,5 +1,5 @@
 # nginx
-Nginx image with logrotate based on debian:buster
+Nginx image with logrotate based on nginx:debian:buster-slim
 
 <!-- 
 ## build

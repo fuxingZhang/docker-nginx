@@ -1,5 +1,7 @@
 # nginx
+Nginx image with logrotate based on nginx:alpine
 
+<!-- 
 ## build
 ```bash
 docker build -t zhangfuxing/nginx-logrotate-alpine .
@@ -9,6 +11,12 @@ docker build -t zhangfuxing/nginx-logrotate-alpine .
 ```bash
 $ docker push zhangfuxing/nginx-logrotate-alpine
 ```
+-->
+
+## pull
+```bash
+$ docker pull zhangfuxing/nginx-logrotate-alpine
+``` 
 
 ## run 
 ```bash  
