@@ -7,10 +7,10 @@ docker image of nginx
 cd ./logrotate.alpine
 ```
 
-### logrotate
+### logrotate.debian.buster
 
 ```bash
-cd ./logrotate
+cd ./logrotate.debian.buster
 ```
 
 ### self
